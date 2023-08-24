@@ -1,3 +1,4 @@
 #!/bin/bash
-chown -h vincent:staff _hello
+if [ "$(stat -c %U _hello)" = "guillaume" ]; then chown vincent:staff _hello; fi
+
 
