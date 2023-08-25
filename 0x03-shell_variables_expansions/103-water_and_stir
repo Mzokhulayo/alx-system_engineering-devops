@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "ibase=water;obase=bestchol;${WATER}+${STIR}" | bc
+printf -v BESTCHOL "%x" "$((16#${WATER} + 16#${STIR}))"
