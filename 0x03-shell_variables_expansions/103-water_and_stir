@@ -1,2 +1,2 @@
 #!/bin/bash
-printf -v BESTCHOL "%x" "$((16#${WATER} + 16#${STIR}))"
+tr -d "\n" <<< $(echo "ibase=water;obase=bestchol;${WATER}+${STIR}" | tr -d '\n' | tr 'a-z' '0-9a-y')
